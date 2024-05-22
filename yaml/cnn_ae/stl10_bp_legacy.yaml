@@ -1,0 +1,38 @@
+method:
+  method: BP
+  architecture: cnn_pool_autoencoder
+  task: autoencoder
+  task_transform: same
+  act_F: relu
+  act_B: relu
+  fw_bn: 2
+  bw_bn: 2
+  bias_init: "zero"
+  bn_affine: 1
+
+dataset:
+  dataset: STL10
+  batchsize: 32
+  num_chn: 3
+
+training:
+  mode: "train"
+  epochs: 50
+  lr_F: 0.03
+  lr_B: 0.
+  mmt_F: 0.5
+  mmt_B: 0.
+  wd_F: 0.00001
+  wd_B: 0.
+  warmup: 200
+  tmax: 50
+  eta_min: 0.001
+  optimizer: SGD
+  GradC: 1
+  loss_scale_C: 1
+  loss_scale_D: 1
+  loss_scale_ssl: 0.5
+  grad_clip_F: 0.2
+  grad_clip_B: 0.2
+  filter_target: 0.
+  seed: 2023

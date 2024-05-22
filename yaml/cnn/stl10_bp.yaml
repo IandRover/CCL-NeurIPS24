@@ -1,0 +1,37 @@
+method:
+  method: BP
+  architecture: cnn_pool
+  task: classification
+  task_transform: none
+  act_F: elu
+  act_B: elu
+  fw_bn: 1
+  bw_bn: 0
+  bias_init: "zero"
+  bn_affine: 0
+
+dataset:
+  dataset: STL10_cls
+  batchsize: 256
+  num_chn: 3
+
+training:
+  mode: "train"
+  epochs: 100
+  lr_F: 0.03
+  lr_B: 0.
+  mmt_F: 0.5
+  mmt_B: 0.
+  wd_F: 0.00001
+  wd_B: 0.
+  warmup: 200
+  tmax: 100
+  eta_min: 0.001
+  optimizer: SGD
+  GradC: 1
+  loss_scale_C: 0.5
+  loss_scale_ssl: 0.5
+  grad_clip_F: 0
+  grad_clip_B: 0
+  filter_target: 0.
+  seed: 2023
