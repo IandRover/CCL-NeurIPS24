@@ -24,6 +24,8 @@ This design addresses the non-locality and backward locking issues inherent in t
 ## Running Experiments
 Run classification experiments using the provided Python scripts for MLP and CNN architectures. For classification, we use `CIFAR-10` for example. 
 
+Before running experiments, please install `pytorch` and `torchvision`.
+
 ### Multi-Layer Perceptron (MLP)
 ```bash
 # Backpropagation
