@@ -64,4 +64,4 @@ python main_ae.py --yaml './yaml/cnn_ae/stl10_ccl_legacy.yaml'
 --loss_scale_C: Loss scaling factor (only for CCL).
 --seed: Random seed (useful for reproducibility).
 ```
-xperiment with different settings for learning rates, momentum, gradient clipping, and seeds as shown in the example commands.
+Experiment with different settings for learning rates, momentum, gradient clipping, and seeds as shown in the example commands.
