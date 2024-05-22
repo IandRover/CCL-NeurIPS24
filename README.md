@@ -24,6 +24,8 @@ This design addresses the non-locality and backward locking issues inherent in t
 ## Running Experiments
 Run classification experiments using the provided Python scripts for MLP and CNN architectures. For classification, we use `CIFAR-10` for example. 
 
+Before running experiments, please install `pytorch` and `torchvision`.
+
 ### Multi-Layer Perceptron (MLP)
 ```bash
 # Backpropagation
@@ -64,4 +66,4 @@ python main_ae.py --yaml './yaml/cnn_ae/stl10_ccl_legacy.yaml'
 --loss_scale_C: Loss scaling factor (only for CCL).
 --seed: Random seed (useful for reproducibility).
 ```
-xperiment with different settings for learning rates, momentum, gradient clipping, and seeds as shown in the example commands.
+Experiment with different settings for learning rates, momentum, gradient clipping, and seeds as shown in the example commands.
