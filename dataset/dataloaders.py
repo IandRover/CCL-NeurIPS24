@@ -99,20 +99,20 @@ def get_dataset(args):
         ])
 
         # Load the STL-10 dataset without any transformations
-        train_dataset_raw = datasets.STL10(root='./data', split='train', download=False, transform=None)
+        train_dataset_raw = datasets.STL10(root='./data', split='train', download=True, transform=None)
         train_dataset_raw, val_dataset_raw = random_split(train_dataset_raw, [0.9, 0.1])
 
         # Apply transformations to the training dataset
-        train_dataset = datasets.STL10(root='./data', split='train', download=False, transform=train_transform)
+        train_dataset = datasets.STL10(root='./data', split='train', download=True, transform=train_transform)
         train_dataset.data = train_dataset_raw.dataset.data[train_dataset_raw.indices]
         train_dataset.labels = train_dataset_raw.dataset.labels[train_dataset_raw.indices]
 
         # Apply transformations to the validation dataset
-        val_dataset = datasets.STL10(root='./data', split='train', download=False, transform=test_transform)
+        val_dataset = datasets.STL10(root='./data', split='train', download=True, transform=test_transform)
         val_dataset.data = val_dataset_raw.dataset.data[val_dataset_raw.indices]
         val_dataset.labels = val_dataset_raw.dataset.labels[val_dataset_raw.indices]
 
-        test_dataset = datasets.STL10(root='./data', split='test', download=False, transform=test_transform)
+        test_dataset = datasets.STL10(root='./data', split='test', download=True, transform=test_transform)
 
         train_loader = torch.utils.data.DataLoader(train_dataset, batch_size=args.batchsize, shuffle=True)
         val_loader = torch.utils.data.DataLoader(val_dataset, batch_size=args.batchsize, shuffle=False)
@@ -141,16 +141,16 @@ def get_dataset(args):
         train_dataset_raw, val_dataset_raw = random_split(train_dataset_raw, [0.9, 0.1])
 
         # Apply transformations to the training dataset
-        train_dataset = datasets.STL10(root='./data', split='train', download=False, transform=train_transform)
+        train_dataset = datasets.STL10(root='./data', split='train', download=True, transform=train_transform)
         train_dataset.data = train_dataset_raw.dataset.data[train_dataset_raw.indices]
         train_dataset.labels = train_dataset_raw.dataset.labels[train_dataset_raw.indices]
 
         # Apply transformations to the validation dataset
-        val_dataset = datasets.STL10(root='./data', split='train', download=False, transform=test_transform)
+        val_dataset = datasets.STL10(root='./data', split='train', download=True, transform=test_transform)
         val_dataset.data = val_dataset_raw.dataset.data[val_dataset_raw.indices]
         val_dataset.labels = val_dataset_raw.dataset.labels[val_dataset_raw.indices]
 
-        test_dataset = datasets.STL10(root='./data', split='test', download=False, transform=test_transform)
+        test_dataset = datasets.STL10(root='./data', split='test', download=True, transform=test_transform)
 
         train_loader = torch.utils.data.DataLoader(train_dataset, batch_size=args.batchsize, shuffle=True)
         val_loader = torch.utils.data.DataLoader(val_dataset, batch_size=args.batchsize, shuffle=False)

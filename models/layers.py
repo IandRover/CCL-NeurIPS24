@@ -88,14 +88,11 @@ class C2Conv(nn.Module):
             self.forward_bn = nn.BatchNorm2d(in_channels, affine=args.bn_affine)
         elif self.fw_bn == 2: 
             self.forward_bn = nn.BatchNorm2d(out_channels, affine=args.bn_affine)
-        else:
-            print("Not using bn in conv forward")
+
         if self.bw_bn == 1: 
             self.backward_bn = nn.BatchNorm2d(out_channels, affine=args.bn_affine)
         elif self.bw_bn == 2: 
             self.backward_bn = nn.BatchNorm2d(in_channels, affine=args.bn_affine)
-        else:
-            print("Not using bn in conv backward")
 
         # activation functions
         self.forward_act = get_activation_function(args.act_F)

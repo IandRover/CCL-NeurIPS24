@@ -1,7 +1,7 @@
 import os
 # Set up environment variables
 os.environ["WANDB_API_KEY"] = "5f04d2ce100707f23b71379f67f28901d496edda"
-# os.environ["WANDB_MODE"] = "disabled"
+os.environ["WANDB_MODE"] = "disabled"
 
 import argparse
 import yaml

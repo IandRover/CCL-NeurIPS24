@@ -1,7 +1,7 @@
 import os
 # Set up environment variables
 os.environ["WANDB_API_KEY"] = "5f04d2ce100707f23b71379f67f28901d496edda"
-# os.environ["WANDB_MODE"] = "disabled"
+os.environ["WANDB_MODE"] = "disabled"
 
 import argparse
 import yaml
@@ -59,20 +59,6 @@ parser.set_defaults(**yaml_config['method'])
 parser.set_defaults(**yaml_config['dataset'])
 parser.set_defaults(**yaml_config['training'])
 args, _ = parser.parse_known_args()
-
-# args.lr_F = 1.2
-# args.lr_B = 1.2
-# args.fw_bn = 2
-# args.bw_bn = 2
-# args.mmt_F = 0.5
-# args.mmt_B = 0.5
-# args.grad_clip_F = 0.3
-# args.grad_clip_B = 0.3
-# args.filter_target = 0.1
-# args.batchsize = 128
-# args.tmax = 200
-# args.GradC = 1
-# args.loss_scale_C = 1
 
 logger.info(args)
 
