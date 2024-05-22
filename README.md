@@ -19,7 +19,7 @@ We introduce a dual network architecture for neural learning, named Counter-Curr
 
 This design addresses the non-locality and backward locking issues inherent in traditional backpropagation by separating the dependency of forward and backward processes. Specifically, it leverages noisy signals from the top layer of the feedforward network and informative signals from the bottom layer of the feedback network, allowing the latter to guide the optimization of the former and enhancing overall learning efficacy.
 
-![Counter-Current Model Architecture](fig_model_architecture.png)
+![Counter-Current Model Architecture](./asset/fig_model_architecture.png)
 
 ## Running Experiments
 Run classification experiments using the provided Python scripts for MLP and CNN architectures. For classification, we use `CIFAR-10` for example. 
