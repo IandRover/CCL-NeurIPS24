@@ -20,8 +20,8 @@ training:
   epochs: 100
   lr_F: 1
   lr_B: 1
-  mmt_F: 0.5
-  mmt_B: 0.5
+  mmt_F: 0.8
+  mmt_B: 0.8
   wd_F: 0.000001
   wd_B: 0.000001
   warmup: 100
@@ -31,7 +31,7 @@ training:
   GradC: 1
   loss_scale_C: 1
   loss_scale_ssl: 0.5
-  grad_clip_F: 0
-  grad_clip_B: 0
-  filter_target: 0.
+  grad_clip_F: 0.3
+  grad_clip_B: 0.3
+  filter_target: 0.2
   seed: 2023

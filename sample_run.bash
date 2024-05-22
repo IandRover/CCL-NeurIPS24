@@ -12,6 +12,6 @@ python main_class_cnn.py --yaml "./yaml/cnn/cifar10_ccl.yaml"
 
 # # Auto-Encoder on STL-10
 # ## Backpropagation
-python main_class_convae.py --yaml './yaml/cnn_ae/stl10_bp_legacy.yaml'
+python main_ae.py --yaml './yaml/cnn_ae/stl10_bp_legacy.yaml'
 # ## Counter-Current Learning
-python main_class_convae.py --yaml './yaml/cnn_ae/stl10_ccl_legacy.yaml'
+python main_ae.py --yaml './yaml/cnn_ae/stl10_ccl_legacy.yaml'

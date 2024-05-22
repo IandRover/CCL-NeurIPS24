@@ -27,34 +27,29 @@ Run classification experiments using the provided Python scripts for MLP and CNN
 ### Multi-Layer Perceptron (MLP)
 ```bash
 # Backpropagation
-YAML_BP='./yaml/mlp/cifar10_bp_pool.yaml'
-python main_class_mlp.py --yaml $YAML_BP
+python main_class_mlp.py --yaml './yaml/mlp/cifar10_bp.yaml'
 
 # Counter-Current Learning
-YAML_CCL='./yaml/mlp/cifar10_ccl.yaml'
-python main_class_mlp.py --yaml $YAML_CCL
+python main_class_mlp.py --yaml './yaml/mlp/cifar10_ccl.yaml'
 ```
 
 ### Convolutional Neural Network (CNN)
 ```bash
 # Backpropagation
-YAML_BP="./yaml/cnn_ae/stl10_bp_legacy.yaml"
-python main_class_cnn.py --yaml $YAML_BP
+python main_class_cnn.py --yaml "./yaml/cnn/cifar10_bp.yaml"
 
 # Counter-Current Learning
-YAML_CCL="./yaml/cnn_ae/stl10_ccl_legacy.yaml"
-python main_class_cnn.py --yaml $YAML_CCL
+python main_class_cnn.py --yaml "./yaml/cnn/cifar10_ccl.yaml"
 ```
 
 ### Auto-Encoder on STL-10
 ```bash
 # Backpropagation
-YAML_BP='./yaml/cnn_ae/cifar10_bp_pool.yaml'
-python main_class_convae.py --yaml $YAML_BP
+python main_ae.py --yaml './yaml/cnn_ae/stl10_bp_legacy.yaml'
+
 
 # Counter-Current Learning
-YAML_CCL='./yaml/cnn_ae/cifar10_ccl.yaml'
-python main_class_convae.py --yaml $YAML_CCL
+python main_ae.py --yaml './yaml/cnn_ae/stl10_ccl_legacy.yaml'
 ```
 
 ### Script Arguments
