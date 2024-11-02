@@ -1,4 +1,8 @@
-# Counter-Current Learning
+# Counter-Current Learning (NeurIPS 2024)
+
+[Chia-Hsiang Kao](https://iandrover.github.io), [Bharath Hariharan](https://www.cs.cornell.edu/~bharathh/)
+
+[![arXiv](https://img.shields.io/badge/arXiv-Counter_Current_Learning-red?style=flat-square)](https://arxiv.org/abs/2409.19841)
 
 Counter-Current Learning (CCL) is a biologically-inspired alternative to the backpropagation algorithm for training neural networks. This repository provides an implementation of the CCL framework and includes code for running image classification experiments using Multi-Layer Perceptrons (MLP) and Convolutional Neural Networks (CNNs).
 
